@@ -21,9 +21,7 @@ class BooksApp extends React.Component {
   }
 
   handleChangeShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then(response => {
-
-    });
+    console.log('on handle shelf change')
   };
   
   render() {

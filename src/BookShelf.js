@@ -18,7 +18,9 @@ class BookShelf extends React.Component {
                       height: 193,
                       backgroundImage: `url(${book.imageLinks.thumbnail})`
                     }}/>
-                    <BookshelfChanger/>
+                    <BookshelfChanger
+                      book={book}
+                      onChangeShelf={this.props.onChangeShelf}/>
                   </div>
                   <div className="book-title">{book.title}</div>
                   <div className="book-authors">{book.authors.join(', ')}</div>

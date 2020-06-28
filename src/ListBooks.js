@@ -21,11 +21,13 @@ class ListBooks extends React.Component {
           <BookShelf
             bookshelfTitle='Want to Read'
             books={allBooks.filter(book => book.shelf === "wantToRead")}
+            onChangeShelf={onChangeShelf}
           />
 
           <BookShelf
             bookshelfTitle='Read'
             books={allBooks.filter(book => book.shelf === "read")}
+            onChangeShelf={onChangeShelf}
           />
         </div>
         <div className="open-search">
