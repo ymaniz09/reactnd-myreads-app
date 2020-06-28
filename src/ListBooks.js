@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 class ListBooks extends React.Component {
   render() {
+    const {allBooks} = this.props
     return (
       <div className="list-books">
         <div className="list-books-title">
@@ -13,14 +14,17 @@ class ListBooks extends React.Component {
 
           <BookShelf
             bookshelfTitle='Currently Reading'
+            books={allBooks.filter(book => book.shelf === "currentlyReading")}
           />
 
           <BookShelf
             bookshelfTitle='Want to Read'
+            books={allBooks.filter(book => book.shelf === "wantToRead")}
           />
 
           <BookShelf
             bookshelfTitle='Read'
+            books={allBooks.filter(book => book.shelf === "read")}
           />
         </div>
         <div className="open-search">
