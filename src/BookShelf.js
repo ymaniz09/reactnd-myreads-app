@@ -1,4 +1,5 @@
 import React from 'react';
+import BookshelfChanger from "./BookshelfChanger";
 
 class BookShelf extends React.Component {
   render() {
@@ -17,15 +18,7 @@ class BookShelf extends React.Component {
                       height: 193,
                       backgroundImage: `url(${book.imageLinks.thumbnail})`
                     }}/>
-                    <div className="book-shelf-changer">
-                      <select>
-                        <option value="move" disabled>Move to...</option>
-                        <option value="currentlyReading">Currently Reading</option>
-                        <option value="wantToRead">Want to Read</option>
-                        <option value="read">Read</option>
-                        <option value="none">None</option>
-                      </select>
-                    </div>
+                    <BookshelfChanger/>
                   </div>
                   <div className="book-title">{book.title}</div>
                   <div className="book-authors">{book.authors.join(', ')}</div>

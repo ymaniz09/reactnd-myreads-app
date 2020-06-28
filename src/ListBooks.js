@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 class ListBooks extends React.Component {
   render() {
-    const {allBooks} = this.props
+    const {allBooks, onChangeShelf} = this.props
     return (
       <div className="list-books">
         <div className="list-books-title">
@@ -15,6 +15,7 @@ class ListBooks extends React.Component {
           <BookShelf
             bookshelfTitle='Currently Reading'
             books={allBooks.filter(book => book.shelf === "currentlyReading")}
+            onChangeShelf={onChangeShelf}
           />
 
           <BookShelf
