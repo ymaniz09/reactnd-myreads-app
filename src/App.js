@@ -29,7 +29,7 @@ class BooksApp extends React.Component {
           </ListBooks>
         )}/>
 
-        <Route path='/search' render={({}) => (
+        <Route path='/search' render={() => (
           <Search>
 
           </Search>
